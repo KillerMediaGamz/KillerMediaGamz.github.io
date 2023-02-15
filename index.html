@@ -1,11 +1,8 @@
-<!DOCTYPE html>
 <html>
+<body background="https://www.solidbackgrounds.com/images/950x350/950x350-cyan-solid-color-background.jpg">
 <head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<style>
-.button {
+  <style> 
+  .button {
     background-color: #0affa5;
     border: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
@@ -15,20 +12,70 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+} 
+
+.text1 {
+    color: rgb(225, 83, 6);
+    font-size: 32px;  
+} 
+
+.text2 {
+    color: rgb(215, 34, 34);
+    font-size: 22px;  
+} 
+
+  </style>
+</head>
+<h1 style="font-family: cursive;" class="text1">Welcome to my website, below is one of my projects!</h1>
+<h2>                                                                           </h2>
+<h3 style="font-family: cursive;" class="text2">---Data finder---</h2>
+
+<button id="btn1" class="button" onclick="obtain()">Find data -current location and IP address</button>
+
+  <p id="par1">IP address:</p>  
+<p id="gfg">----------------</p>
+  <p id="space1"></p>
+  <p id="par2">Current location:</p>
+ 
+
+  <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+  
+<script>
+ function obtain() {
+   getIP()
+ getLocation()
+ } 
+  
+function getLocation() {
+  
+  var x = document.getElementById("loc");
+  
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation does not work with this browser";
+  }
 }
 
-</style>
-</head>
-<body>
+function showPosition(position) {
+   var fullLocation = position.coords.latitude+","+position.coords.longitude;
+  
+  alert("Location: "+fullLocation);
+}
 
-<h1>Welcome to my Website!</h1>
-<p>This website was created with JavaScript, HTML and CSS!</p>
-<button id="btn1" type="button" class="button" onclick="go()">Click Me!</button>
+  
+    function getIP() {
+  	$.getJSON("https://api.ipify.org?format=json", function(data) {
+		
+	
+		$("#gfg").html(data.ip);
+	})
+}
+  
 
-<script>
-  function go() {
-    alert("Hi!");
-  }
 </script>
+
 </body>
 </html>

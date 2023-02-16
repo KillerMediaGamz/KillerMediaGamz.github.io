@@ -60,7 +60,22 @@
 <script>
         function devPageLogin() {
 
-var password = 'Kpack5280';
+            var digit1 = "K"
+            var digit2 = "p"
+            var digit3 = "a"
+            var digit4 = "c"
+            var digit5 = "k"
+            var digit6 = "5"
+            var digit7 = "2"
+            var digit8 = "8"
+            var digit9 = "0"
+   
+            var comb1 = digit1+digit2;
+            var comb2 = digit3+digit4;
+            var comb3 = digit5+digit6;
+            var comb4 = digit7+digit8;
+            
+var password =comb1+comb2+comb3+comb4+digit9;
 
 if (this.document.login.pass.value == password) {
   top.location.href="test.html";

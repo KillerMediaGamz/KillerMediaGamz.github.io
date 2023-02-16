@@ -100,8 +100,8 @@
  <div class="console">
   <a href="test.html"><button style="font-family:copperplate" class="buttonPageSwitch"> Back to testing page </button></a>
   <h1 class="textHeaderDev">Developer javascript terminal</h1><br>
-  <p class="textPara"> Type javascript commands and click submit to run them</p>
-  <button class="button" style="font-family:copperplate" onclick="submit()">Click to run command</button>
+  <p class="textPara" style="font-family:copperplate"> Type javascript commands and press enter to run them</p>
+  <p class="textPara" style="font-family:copperplate">Note: javascipt teminal only works on a computer</p>
   <input class="console-input" type="text" autofocus spellcheck="false">
   <div class="console-history"></div>
 </div>
@@ -132,7 +132,7 @@ consoleInput.addEventListener("keyup", (e) => {
     return;
   }
 
-  function submit() {
+  if (e.key === "Enter") {
     try {
       addResult(code, eval(code));
     } catch (err) {

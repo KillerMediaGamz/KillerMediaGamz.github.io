@@ -1,0 +1,77 @@
+<html>
+<body background="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-black-solid-color-background.jpg">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<a href="index.html"><button style="font-family:copperplate" class="buttonPageSwitch">Back to main Page</button></a>
+<h1 class="textDev" style="font-family:copperplate"> Developer Login</h1>
+
+    <div style="text-align: center; margin: 0 auto; color: #f4f4f7; font: normal 26px arial, sans-serif;">
+        <p class="textPara">Enter developer password:</p>
+        <form name="login" style="margin: 5px 0px 0px 0px;">
+        <input type="text" name="pass" size="17" onkeydown="if(event.keyCode==13) event.keyCode=9;" style="width: 130px;"><br>
+        <br>
+        <input type="button" style="font-family: copperplate" class="buttonLogin" value="Submit" onclick="javascript:devPageLogin(this.form)">
+        </form>
+        </div>
+
+        <head>
+            <style>
+                * {
+                   text-align-last: center;   
+                }
+                .buttonPageSwitch {
+        border: 3px solid rgb(252, 10, 91);
+      background-color: black;
+      color: white;
+      padding: 14px 28px;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 6px 10px;
+    } 
+     .buttonPageSwitch:hover {
+      border: 3px solid rgb(252, 10, 91);
+      background-color:white ;
+      color: grey;
+    }        
+      .textHeader {
+      color: rgb(242, 230, 234);
+       font-size: 28px; 
+    } 
+     .textPara {
+
+      color: rgb(242, 230, 234);
+       font-size: 22px; 
+    }         
+    .textDev {
+      color: rgb(248, 17, 94);
+       font-size: 40px; 
+    } 
+    .buttonLogin{
+        border: 3px solid rgb(247, 147, 24);
+      background-color: white;
+      color: rgb(16, 16, 16);
+      padding: 4px 8px;
+      font-size: 14px;
+      cursor: pointer;
+    } 
+            </style>
+        </head>
+        
+<script>
+        function devPageLogin() {
+
+var password = 'Kpack5280';
+
+if (this.document.login.pass.value == password) {
+  top.location.href="test.html";
+}
+else {
+  alert("Incorrect password, please try again.");
+  }
+}
+
+    </script>
+   
+</body>
+</html>
+  

@@ -55,10 +55,10 @@
 <button id="btn1" class="button" style="font-family:copperplate" onclick="obtain()">Find data -current location and IP address</button>
 
   <p id="par1" class="textPara ">IP address:</p>  
-<p id="gfg" class="textPara" >----------------</p>
+  <p id="ipadder" class="textPara" >----------------</p>
   <p id="space1"></p>
   <p id="par2" class="textPara" >Current location:</p>
- 
+  <p id="loca">----------------</p>
 
   <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -84,7 +84,7 @@ function getLocation() {
 function showPosition(position) {
    var fullLocation = position.coords.latitude+","+position.coords.longitude;
   
-  alert("Location: "+fullLocation);
+		$("#loca").html(data.ip);
 }
 
   
@@ -92,7 +92,7 @@ function showPosition(position) {
   	$.getJSON("https://api.ipify.org?format=json", function(data) {
 		
 	
-		$("#gfg").html(data.ip);
+		$("#ipadder").html(data.ip);
 	})
 }
   

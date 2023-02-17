@@ -30,13 +30,28 @@
  .textPara {
   color: rgb(242, 230, 234);
    font-size: 22px; 
-}         
+} 
+         .button {
+    border: 3px solid rgb(230, 11, 37);
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+} 
+ .button:hover {
+  border: 3px solid rgb(230, 11, 37);
+  background-color:white ;
+  color:black;
+}              
+         
+         
         </style>
     </head>
-  <h1 class="textheader" style="font-family:copperplate"> Downloadable Resourses </h1><br>
-  
-  <p class="textPara" style="font-family:copperplate"> Webiste Text Editor </p>
-<a href="websiteEditor.txt" download="websiteEditor.txt">
+ <a href="index.html"><button style="font-family:copperplate" class="buttonPageSwitch">Back to main page</button></a><br>
+  <h1 style="font-family:copperplate" class="textHeader">Downloadable Resourses</h1><br>
+  <p style="font-family:copperplate" class="textPara">Webiste Text Editor</p>
+<button style="font-fammily:copperplate" class="button"
    
  
   
@@ -44,6 +59,10 @@
   
   
   <script>
+   function downloadRes1() {
+    <a download="websiteEditor.txt">
+     alert("Downloaded Website Text Editor");
+   }
   </script>
   
 </body>
